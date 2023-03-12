@@ -1,0 +1,55 @@
+body {
+    background-color: rgba(245, 230, 245, 0.997);
+    font-family: 'Rubik Iso';
+}
+
+.page-title {
+    margin: 1.5rem auto;
+    width: 60%;
+    font-size: 1.6rem;
+}
+
+.accordeon-container {
+    width: 92%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.border-line {
+    height: 0.1rem;
+    width: 100%;
+    background-color: rgb(220, 195, 244);
+    margin: 0.3rem;
+}
+
+.accordeon-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordeon-title {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.accordeon-input {
+    appearance: none;
+}
+
+.icon {
+    margin-top: 0.2rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: url("assets/plus-solid.svg");
+    background-repeat: no-repeat;
+}
+
+.img-meme {
+    display: block;
+    width: 80%;
+    margin: 0.5rem auto;
+}
