@@ -53,6 +53,7 @@ body {
     width: 0;
     overflow: hidden;
     margin: 0.5rem auto;
+    transition: 0.7s;
 }
 
 .text {
@@ -70,7 +71,11 @@ body {
 }
 
 .accordeon-title:has(.accordeon-input:checked) > .text {
-    color: blue;
+    color: rgb(0, 0, 0);
+}
+
+.accordeon-title:active > .text {
+    color: rgb(255, 0, 136);
 }
 
 @media (min-width: 600px) {
@@ -105,7 +110,6 @@ body {
         width: 40%;
         transition: 0.7s;
     }
-
 }
 
 @media (hover: hover) {
@@ -122,5 +126,21 @@ body {
     .icon {
         width: 0;
         overflow: hidden;
+    }
+
+    .accordeon-container:hover > .accordeon-item > .accordeon-title > .text {
+        color: black;
+    }
+
+    .text {
+        color: rgb(255, 0, 136);
+    }
+    
+    .accordeon-title:active {
+        filter: opacity(20%);
+    }
+
+    .accordeon-title:active > .text {
+        color: rgb(255, 0, 136) !important;
     }
 }
