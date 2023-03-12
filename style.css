@@ -4,7 +4,7 @@ body {
 }
 
 .page-title {
-    margin: 1.5rem auto;
+    margin: 3% auto;
     width: 60%;
     font-size: 1.6rem;
 }
@@ -25,6 +25,7 @@ body {
 }
 
 .accordeon-item {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -34,6 +35,7 @@ body {
     width: 100%;
     margin: 0 auto;
     cursor: pointer;
+    font-size: 1.2rem;
 }
 
 .accordeon-input {
@@ -50,6 +52,39 @@ body {
 
 .img-meme {
     display: block;
-    width: 80%;
+    width: 60%;
     margin: 0.5rem auto;
+}
+
+@media (min-width: 600px) {
+    .accordeon-container {
+        width: 70%;
+    }
+
+    .accordeon-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1500px) and (max-width: 2000px) {
+    .page-title { 
+        font-size: 3rem;
+    }
+
+    .accordeon-item {
+        width: 100%;
+    }
+
+    .accordeon-title {
+        font-size: 2.5rem;
+    }
+
+    .img-meme {
+        width: 40%;
+    }
+
+    .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }
