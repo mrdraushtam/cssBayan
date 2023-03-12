@@ -1,0 +1,152 @@
+body {
+    background-color: rgba(245, 230, 245, 0.997);
+    font-family: 'Rubik Iso';
+}
+
+.page-title {
+    margin: 3% auto;
+    width: 60%;
+    font-size: 1.6rem;
+}
+
+.accordeon-container {
+    width: 92%;
+    margin: 0 auto;
+}
+
+.border-line {
+    height: 0.1rem;
+    width: 100%;
+    background-color: rgb(220, 195, 244);
+    margin: 0.3rem;
+}
+
+.accordeon-item {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordeon-title {
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.accordeon-input {
+    appearance: none;
+}
+
+.icon {
+    margin-top: 0.2rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: url("assets/plus-solid.svg");
+    background-repeat: no-repeat;
+}
+
+.img-meme {
+    width: 0;
+    overflow: hidden;
+    margin: 0.5rem auto;
+    transition: 0.7s;
+}
+
+.text {
+    margin: 0;
+}
+
+.accordeon-input:checked + .accordeon-title > .img-meme {
+    width: 60%;
+    transition: 0.7s;
+}
+
+.accordeon-input:checked + .accordeon-title > .header > .icon {
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+
+.accordeon-input:checked + .accordeon-title > .header > .text {
+    color: rgb(0, 0, 0);
+}
+
+.accordeon-title:active > .header > .text {
+    color: rgb(255, 0, 136);
+}
+
+@media (min-width: 600px) {
+    .accordeon-container {
+        width: 70%;
+    }
+
+    .accordeon-title {
+        font-size: 1.5rem;
+    }
+
+    .accordeon-input:checked + .accordeon-title > .img-meme {
+        width: 40%;
+        transition: 0.7s;
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 2000px) {
+    .page-title { 
+        font-size: 3rem;
+    }
+
+    .accordeon-item {
+        width: 100%; 
+    }
+
+    .accordeon-title {
+        font-size: 2.5rem;
+    }
+
+    .accordeon-input:checked + .accordeon-title > .img-meme {
+        width: 40%;
+        transition: 0.7s;
+    }
+}
+
+@media (hover: hover) {
+    .accordeon-input:hover + .accordeon-title > .img-meme {
+        width: 40%;
+        transition: 0.7s;
+    }
+
+    .accordeon-container:hover > .accordeon-item > .accordeon-title > .header > .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .icon {
+        width: 0;
+        overflow: hidden;
+    }
+
+    .accordeon-container:hover > .accordeon-item > .accordeon-title > .header > .text {
+        color: black;
+    }
+
+    .text {
+        color: rgb(255, 0, 136);
+    }
+    
+    .accordeon-title:active {
+        filter: opacity(10%);
+    }
+
+    .accordeon-title:active > .header > .text {
+        color: rgb(255, 0, 136) !important;
+    }
+}
