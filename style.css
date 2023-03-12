@@ -27,6 +27,12 @@ body {
     margin: 0 auto;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .accordeon-title {
     width: 100%;
     margin: 0 auto;
@@ -60,21 +66,21 @@ body {
     margin: 0;
 }
 
-.accordeon-input:checked + .img-meme {
+.accordeon-input:checked + .accordeon-title > .img-meme {
     width: 60%;
     transition: 0.7s;
 }
 
-.accordeon-title:has(.accordeon-input:checked) + .icon{
+.accordeon-input:checked + .accordeon-title > .header > .icon {
     transform: rotate(45deg);
     transition: 0.3s;
 }
 
-.accordeon-title:has(.accordeon-input:checked) > .text {
+.accordeon-input:checked + .accordeon-title > .header > .text {
     color: rgb(0, 0, 0);
 }
 
-.accordeon-title:active > .text {
+.accordeon-title:active > .header > .text {
     color: rgb(255, 0, 136);
 }
 
@@ -87,7 +93,7 @@ body {
         font-size: 1.5rem;
     }
 
-    .accordeon-input:checked + .img-meme {
+    .accordeon-input:checked + .accordeon-title > .img-meme {
         width: 40%;
         transition: 0.7s;
     }
@@ -106,19 +112,19 @@ body {
         font-size: 2.5rem;
     }
 
-    .accordeon-input:checked + .img-meme {
+    .accordeon-input:checked + .accordeon-title > .img-meme {
         width: 40%;
         transition: 0.7s;
     }
 }
 
 @media (hover: hover) {
-    .accordeon-input:hover + .img-meme {
+    .accordeon-input:hover + .accordeon-title > .img-meme {
         width: 40%;
         transition: 0.7s;
     }
 
-    .accordeon-container:hover > .accordeon-item > .icon {
+    .accordeon-container:hover > .accordeon-item > .accordeon-title > .header > .icon {
         width: 1.5rem;
         height: 1.5rem;
     }
@@ -128,7 +134,7 @@ body {
         overflow: hidden;
     }
 
-    .accordeon-container:hover > .accordeon-item > .accordeon-title > .text {
+    .accordeon-container:hover > .accordeon-item > .accordeon-title > .header > .text {
         color: black;
     }
 
@@ -137,10 +143,10 @@ body {
     }
     
     .accordeon-title:active {
-        filter: opacity(20%);
+        filter: opacity(10%);
     }
 
-    .accordeon-title:active > .text {
+    .accordeon-title:active > .header > .text {
         color: rgb(255, 0, 136) !important;
     }
 }
